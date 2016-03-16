@@ -1,0 +1,5 @@
+run mongo db: 
+mongod --smallfiles
+
+run node server: 
+node server.js
