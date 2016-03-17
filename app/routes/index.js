@@ -36,12 +36,12 @@ module.exports = function(app, passport) {
   		.get(function (req, res) {
   			res.sendFile(path + '/public/login.html');
   		});*/
-  app.route('/timestamp/')
+/*  app.route('/timestamp/')
 
   .get(function(req, res) {
 
     res.sendFile(path + '/public/timestamp.html');
-  });
+  });*/
 
 
   function getTime(time) {
@@ -102,7 +102,7 @@ module.exports = function(app, passport) {
     time = time.join('') * 1000;
     return time;
   }
-  app.route('/timestamp/:time')
+  app.route('/:time')
 
   .get(function(req, res) {
     var query = getTime(req.params.time);
