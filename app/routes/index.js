@@ -107,7 +107,9 @@ module.exports = function(app, passport) {
   .get(function(req, res) {
     var query = getTime(req.params.time);
     if (query === 1) {
-      res.sendFile(path + '/public/timestamp.html');
+      var invalidTime = {"unix":null,"natural":null};
+      res.send(invalidTime);
+      //res.sendFile(path + '/public/timestamp.html');
     } else {
       res.send(query);
     }
